@@ -1,0 +1,31 @@
+@import "colors";
+
+#codePopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $light-color;
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  padding: 20px;
+  z-index: 999;
+  text-align: initial;
+}
+
+#codePopup pre {
+  overflow-x: auto;
+}
+
+#codePopup button {
+  position: absolute; /* Torna o botão position:absolute para posicionamento personalizado */
+  top: 16px; /* Ajusta a posição vertical */
+  right: 16px; /* Ajusta a posição horizontal */
+  background-color: transparent; /* Remove o fundo */
+  color: #ccc; /* Cor do ícone "X" */
+  border: none; /* Remove a borda */
+  font-size: 16px; /* Ajusta o tamanho da fonte */
+  cursor: pointer; /* Adiciona um cursor ao botão */
+  padding: 0; /* Remove o preenchimento */
+  line-height: 1; /* Define a altura da linha para 1 */
+}
