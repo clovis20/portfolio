@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.fd7c1746.css","mappings":"AAGA,KAEE,4BAA8B,CAD9B,QAEF,CCJA,KACE,iBACF","sources":["index.css","App.css"],"sourcesContent":["/* src/index.css */\n\n/* Reset some default styles */\nbody {\n  margin: 0;\n  font-family: Arial, sans-serif;\n}\n","/* src/App.css */\n\n.App {\n  text-align: center;\n}\n"],"names":[],"sourceRoot":""}
