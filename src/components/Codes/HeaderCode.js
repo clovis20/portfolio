@@ -1,5 +1,6 @@
-const headerCode = `import React from "react"
+const headerCode = `/* Header.js */
 
+import React from "react"
 import CP from "./CP"
 import "../styles/Header.scss"
 import headerCode from "./Codes/HeaderCode"

@@ -1,0 +1,83 @@
+@import "colors";
+
+.hero {
+  font-family: "League Spartan", sans-serif;
+  background-color: $darkprimary-color; /* Define a cor de fundo da hero section */
+  color: $light-color; /* Define a cor do texto */
+  padding: 60px 20px; /* Adiciona espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .hero-text {
+      flex: 1; /* Ocupa o espaço disponível */
+      margin: 0 auto;
+
+      .text-content {
+        h2 {
+          font-weight: 400;
+          font-size: 24px; /* Define o tamanho da fonte do h2 */
+          color: $light-color; /* Define a cor do h2 como branco */
+          margin: 0; /* Remove as margens */
+        }
+
+        h1 {
+          font-size: 48px; /* Define o tamanho da fonte do h1 */
+          color: $secondary-color; /* Define a cor do h1 como secundária */
+          margin: 10px 0; /* Reduz o espaçamento entre o h2 e o h1 */
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: 0.15em solid $success-color;
+          animation:
+            typing 3s steps(40, end) forwards,
+            blink-caret 0.75s step-end 3s forwards;
+          transition: opacity 0.5s ease-in-out;
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin: 5px 0 0;
+      }
+    }
+
+    .hero-image-container {
+      flex: 1;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .hero-icons {
+      display: flex;
+      margin-top: 8px;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: $success-color;
+  }
+}

@@ -9,15 +9,18 @@
   background-color: $primary-color;
   border: 1px solid $primary-color;
   padding: 20px;
-  z-index: 999;
+  z-index: 2;
   text-align: initial;
+  width: 600px;
+  height: 556px;
+  overflow: auto;
 }
 
 #codePopup pre {
   overflow-x: auto;
 }
 
-#codePopup button {
+#codePopup button.close-button {
   position: absolute; /* Torna o botão position:absolute para posicionamento personalizado */
   top: 16px; /* Ajusta a posição vertical */
   right: 16px; /* Ajusta a posição horizontal */
@@ -26,6 +29,20 @@
   border: none; /* Remove a borda */
   font-size: 16px; /* Ajusta o tamanho da fonte */
   cursor: pointer; /* Adiciona um cursor ao botão */
-  padding: 0; /* Remove o preenchimento */
+  padding: 5px 0px;
   line-height: 1; /* Define a altura da linha para 1 */
+}
+
+#codePopup button.toggle-button {
+  position: absolute; /* Torna o botão position:absolute para posicionamento personalizado */
+  top: 16px; /* Ajusta a posição vertical */
+  right: 16px; /* Ajusta a posição horizontal */
+  background-color: $light-color; /* Remove o fundo */
+  color: $primary-color; /* Cor do ícone "X" */
+  border: 1px solid $primary-color; /* Remove a borda */
+  font-size: 14px; /* Ajusta o tamanho da fonte */
+  cursor: pointer; /* Adiciona um cursor ao botão */
+  padding: 5px 10px;
+  line-height: 1; /* Define a altura da linha para 1 */
+  margin-right: 20px;
 }
