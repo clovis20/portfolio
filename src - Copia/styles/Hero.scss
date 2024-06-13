@@ -3,15 +3,14 @@
 .hero {
   background-color: $darkprimary-color; /* Define a cor de fundo da hero section */
   color: $light-color; /* Define a cor do texto */
-  height: 100vh; /* Adiciona espaçamento interno */
+  padding: 168px 20px; /* Adiciona espaçamento interno */
   text-align: center; /* Centraliza o texto */
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   .hero-content {
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 
     .hero-text {

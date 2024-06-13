@@ -12,15 +12,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { useLanguage } from "../context/LanguageContext"
 import heroimage from "../assets/images/heroimage.png"
-import CodePopup from "./CodePopup"
-import useCodePopup from "../hooks/useCodePopup"
+import "../styles/Hero.scss"
 
 import heroPT from "./Languages/Hero/heroPT"
 import heroEN from "./Languages/Hero/heroEN"
 import heroES from "./Languages/Hero/heroES"
-import heroCss from "./Codes/HeroCss"
-import heroCode from "./Codes/HeroCode"
-import "../styles/Hero.scss"
+import "../styles/Header.scss"
 
 const Hero = () => {
   const { language } = useLanguage()
@@ -31,15 +28,6 @@ const Hero = () => {
   } else if (language === "es") {
     heroContent = heroES
   }
-
-  const {
-    handleToggleMode,
-    handleMouseOver,
-    handleClosePopup,
-    isPopupOpen,
-    popupJsContent,
-    popupCssContent,
-  } = useCodePopup()
 
   return (
     <section className="hero">
@@ -62,24 +50,12 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-image-container">
-          <img
-            className="hero-image"
-            src={heroimage}
-            alt=""
-            onMouseOver={() => handleMouseOver(heroCode, heroCss)}
-          />
+          <img className="hero-image" src={heroimage} alt="" />
         </div>
       </div>
       <div className="scroll-down">
         <span></span>
       </div>
-      <CodePopup
-        isOpen={isPopupOpen}
-        jsCode={popupJsContent}
-        cssCode={popupCssContent}
-        onClose={handleClosePopup} // Utilizando a função closePopup corretamente
-        onToggleMode={handleToggleMode} // Ajustar conforme necessário
-      />
     </section>
   )
 }

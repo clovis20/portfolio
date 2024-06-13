@@ -7,21 +7,10 @@ import headerEN from "./Languages/Header/headerEN"
 import headerPT from "./Languages/Header/headerPT"
 import headerES from "./Languages/Header/headerES"
 import headerCode from "./Codes/HeaderCode"
-import headerCss from "./Codes/HeaderCss"
-import CodePopup from "./CodePopup"
-import useCodePopup from "../hooks/useCodePopup"
+
 import "../styles/Header.scss"
 
-const Header = () => {
-  const {
-    handleToggleMode,
-    handleMouseOver,
-    handleClosePopup,
-    isPopupOpen,
-    popupJsContent,
-    popupCssContent,
-  } = useCodePopup()
-
+const Header = ({ onMouseOver }) => {
   const { language } = useLanguage()
   let headerContent = headerPT
 
@@ -34,10 +23,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <div
-          className="logo"
-          onMouseOver={() => handleMouseOver(headerCode, headerCss)}
-        >
+        <div className="logo" onMouseOver={() => onMouseOver(headerCode)}>
           <CP /> {/* Use o componente CP como a sua logo */}
         </div>
         <nav className="nav">
@@ -57,13 +43,6 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <CodePopup
-        isOpen={isPopupOpen}
-        jsCode={popupJsContent}
-        cssCode={popupCssContent}
-        onClose={handleClosePopup}
-        onToggleMode={handleToggleMode}
-      />
     </header>
   )
 }

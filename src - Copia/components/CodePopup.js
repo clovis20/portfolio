@@ -2,18 +2,23 @@
 
 import React, { useRef, useEffect, useState } from "react"
 
-const CodePopup = ({ isOpen, jsCode, cssCode, onClose, onToggleMode }) => {
+const CodePopup = ({
+  isOpen,
+  codeContent,
+  onClose,
+  isCssMode,
+  onToggleMode,
+}) => {
   const popupRef = useRef(null)
   const [buttonText, setButtonText] = useState("Visualizar CSS")
-  const [showCss, setShowCss] = useState(false)
 
   useEffect(() => {
-    if (showCss) {
+    if (isCssMode) {
       setButtonText("Visualizar Código")
     } else {
       setButtonText("Visualizar CSS")
     }
-  }, [showCss])
+  }, [isCssMode])
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -33,11 +38,6 @@ const CodePopup = ({ isOpen, jsCode, cssCode, onClose, onToggleMode }) => {
     }
   }, [isOpen, onClose])
 
-  const handleToggleMode = () => {
-    setShowCss(!showCss)
-    onToggleMode()
-  }
-
   return (
     <div
       id="codePopup"
@@ -47,10 +47,10 @@ const CodePopup = ({ isOpen, jsCode, cssCode, onClose, onToggleMode }) => {
     >
       <div id="code">
         <pre>
-          <code>{showCss ? cssCode : jsCode}</code>
+          <code>{codeContent}</code>
         </pre>
       </div>
-      <button className="toggle-button" onClick={handleToggleMode}>
+      <button className="toggle-button" onClick={onToggleMode}>
         {buttonText}
       </button>
       <button className="close-button" onClick={onClose}>

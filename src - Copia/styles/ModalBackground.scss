@@ -1,0 +1,18 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  backdrop-filter: blur(5px); /* Aplica um efeito de desfoque */
+  z-index: 999; /* Garante que o modal esteja na frente de outros elementos */
+  transition:
+    visibility 0s,
+    opacity 0.5s ease-out; /* Adiciona uma transição para suavizar o efeito de desaparecimento */
+}
+
+.modal-background.hidden {
+  opacity: 0; /* Define a opacidade para 0 para ocultar o fundo */
+  visibility: hidden; /* Esconde o elemento do layout */
+}

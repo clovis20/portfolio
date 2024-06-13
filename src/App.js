@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from "react"
-import CodePopup from "./components/CodePopup"
+import React, { useState } from "react"
+import { LanguageProvider } from "./context/LanguageContext"
+import Header from "./components/Header"
+import Hero from "./components/Hero"
+import About from "./components/About"
+import LanguageModal from "./components/LanguageModal"
 import "./styles/style.scss"
 import "./styles/CodePopup.scss"
 import "./App.css"
-import Header from "./components/Header"
-import headerCode from "./components/Codes/HeaderCode"
-import headerCss from "./components/Codes/HeaderCss"
-import Hero from "./components/Hero"
-import { LanguageProvider } from "./context/LanguageContext"
-import LanguageModal from "./components/LanguageModal"
 
-const AppContent = () => {
+const App = () => {
   //const { language } = useLanguage()
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
-  const [codeContent, setCodeContent] = useState("")
-  const [isCssMode, setIsCssMode] = useState(false)
   const [isLanguageModalOpen, setIsLanguageModalOpen] = useState(true)
 
   // Função para abrir o modal de seleção de idioma
@@ -27,34 +22,12 @@ const AppContent = () => {
     setIsLanguageModalOpen(false)
   }
 
-  const handleMouseOver = (content) => {
-    setCodeContent(content)
-    setIsPopupOpen(true)
-    setIsCssMode(false)
-  }
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false)
-  }
-
-  const handleToggleMode = () => {
-    if (isCssMode) {
-      setCodeContent(headerCode)
-    } else {
-      setCodeContent(headerCss)
-    }
-    setIsCssMode(!isCssMode)
-  }
-
   return (
-    <>
-      <Header onMouseOver={handleMouseOver} />
+    <LanguageProvider>
+      <Header />
       <Hero />
+      <About />
       <main>
-        <section id="about">
-          <h2>Quem Sou</h2>
-          <p>Breve descrição sobre você.</p>
-        </section>
         <section id="projects">
           <h2>Projetos</h2>
           <p>Descrição dos projetos.</p>
@@ -69,21 +42,6 @@ const AppContent = () => {
       >
         {isLanguageModalOpen && <LanguageModal onClose={closeLanguageModal} />}
       </div>
-      <CodePopup
-        isOpen={isPopupOpen}
-        codeContent={codeContent}
-        onClose={handleClosePopup}
-        isCssMode={isCssMode}
-        onToggleMode={handleToggleMode}
-      />
-    </>
-  )
-}
-
-function App() {
-  return (
-    <LanguageProvider>
-      <AppContent />
     </LanguageProvider>
   )
 }
