@@ -1,13 +1,13 @@
 @import "colors";
 
 .hero {
-  font-family: "League Spartan", sans-serif;
   background-color: $darkprimary-color; /* Define a cor de fundo da hero section */
   color: $light-color; /* Define a cor do texto */
-  padding: 60px 20px; /* Adiciona espaçamento interno */
+  padding: 168px 20px; /* Adiciona espaçamento interno */
   text-align: center; /* Centraliza o texto */
 
   .hero-content {
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -20,13 +20,13 @@
       .text-content {
         h2 {
           font-weight: 400;
-          font-size: 24px; /* Define o tamanho da fonte do h2 */
+          font-size: 32px; /* Define o tamanho da fonte do h2 */
           color: $light-color; /* Define a cor do h2 como branco */
           margin: 0; /* Remove as margens */
         }
 
         h1 {
-          font-size: 48px; /* Define o tamanho da fonte do h1 */
+          font-size: 64px; /* Define o tamanho da fonte do h1 */
           color: $secondary-color; /* Define a cor do h1 como secundária */
           margin: 10px 0; /* Reduz o espaçamento entre o h2 e o h1 */
           overflow: hidden;
@@ -61,6 +61,27 @@
       gap: 15px;
     }
   }
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 12px solid $light-color;
+      animation: arrow-bounce 1s infinite;
+    }
+  }
 }
 
 @keyframes typing {
@@ -79,5 +100,18 @@
   }
   50% {
     border-color: $success-color;
+  }
+}
+
+@keyframes arrow-bounce {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

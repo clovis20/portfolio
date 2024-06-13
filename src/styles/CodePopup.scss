@@ -12,12 +12,16 @@
   z-index: 2;
   text-align: initial;
   width: 600px;
-  height: 556px;
+  max-height: 80vh;
   overflow: auto;
+  border: 2px solid $darkprimary-color;
+  border-radius: 20px;
+  box-shadow: 0 0 11px 11px rgba(0, 0, 0, 0.5);
 }
 
 #codePopup pre {
   overflow-x: auto;
+  margin-bottom: 0;
 }
 
 #codePopup button.close-button {
@@ -27,7 +31,7 @@
   background-color: transparent; /* Remove o fundo */
   color: #ccc; /* Cor do ícone "X" */
   border: none; /* Remove a borda */
-  font-size: 16px; /* Ajusta o tamanho da fonte */
+  font-size: 18px; /* Ajusta o tamanho da fonte */
   cursor: pointer; /* Adiciona um cursor ao botão */
   padding: 5px 0px;
   line-height: 1; /* Define a altura da linha para 1 */
@@ -45,4 +49,5 @@
   padding: 5px 10px;
   line-height: 1; /* Define a altura da linha para 1 */
   margin-right: 20px;
+  border-radius: 8px;
 }

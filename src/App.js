@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import CodePopup from "./components/CodePopup"
+import "./styles/style.scss"
 import "./styles/CodePopup.scss"
 import "./App.css"
 import Header from "./components/Header"

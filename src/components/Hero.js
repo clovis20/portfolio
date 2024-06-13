@@ -31,7 +31,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="hero-content">
+      <div className="container hero-content">
         <div className="hero-text">
           <div className="text-content">
             <h2>{heroContent.heroA}</h2>
@@ -52,6 +52,9 @@ const Hero = () => {
         <div className="hero-image-container">
           <img className="hero-image" src={heroimage} alt="" />
         </div>
+      </div>
+      <div className="scroll-down">
+        <span></span>
       </div>
     </section>
   )
