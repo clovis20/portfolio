@@ -11,7 +11,7 @@ import {
   faDocker,
 } from "@fortawesome/free-brands-svg-icons"
 import { useLanguage } from "../context/LanguageContext"
-import heroimage from "../assets/images/heroimage.svg"
+import heroimage from "../assets/images/heroimage.webp"
 import CodePopup from "./CodePopup"
 import useCodePopup from "../hooks/useCodePopup"
 

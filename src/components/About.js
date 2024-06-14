@@ -11,7 +11,7 @@ import aboutPT from "./Languages/About/aboutPT"
 import aboutEN from "./Languages/About/aboutEN"
 import aboutES from "./Languages/About/aboutES"
 
-import myPhoto from "../assets/images/myphoto.svg"
+import myPhoto from "../assets/images/myphoto.webp"
 import "../styles/about.scss"
 
 const About = () => {
