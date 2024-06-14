@@ -10,7 +10,7 @@ import headerCode from "./Codes/HeaderCode"
 import headerCss from "./Codes/HeaderCss"
 import CodePopup from "./CodePopup"
 import useCodePopup from "../hooks/useCodePopup"
-import "../styles/Header.scss"
+import "../styles/header.scss"
 
 const Header = () => {
   const {

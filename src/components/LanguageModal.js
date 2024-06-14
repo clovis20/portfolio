@@ -3,8 +3,8 @@ import { useLanguage } from "../context/LanguageContext"
 import brazilFlag from "../assets/images/brazilflag.png"
 import usaFlag from "../assets/images/englishflag.png"
 import spainFlag from "../assets/images/spainflag.png"
-import "../styles/LanguageModal.scss"
-import "../styles/ModalBackground.scss"
+import "../styles/languageModal.scss"
+import "../styles/modalBackground.scss"
 
 const LanguageModal = ({ onClose }) => {
   const { switchLanguage } = useLanguage()

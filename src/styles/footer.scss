@@ -1,0 +1,47 @@
+/* footer.scss */
+
+@import "colors";
+
+.footer {
+  background-color: $darkprimary-color;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  font-size: 24px;
+  //margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+
+  a {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #007bff; /* Cor de hover a ser ajustada conforme seu tema */
+  }
+}
+
+.footer-text {
+  font-size: 14px;
+  margin-top: 10px;
+
+  p {
+    margin: 5px 0;
+  }
+}

@@ -2,13 +2,28 @@
 
 import React from "react"
 import CodePopup from "./CodePopup"
-import useCodePopup from "../hooks/useCodePopup"
-import myPhoto from "../assets/images/myphoto.jpg"
-import "../styles/About.scss"
 import aboutCss from "./Codes/AboutCss"
 import aboutCode from "./Codes/AboutCode"
+import useCodePopup from "../hooks/useCodePopup"
+import { useLanguage } from "../context/LanguageContext"
+
+import aboutPT from "./Languages/About/aboutPT"
+import aboutEN from "./Languages/About/aboutEN"
+import aboutES from "./Languages/About/aboutES"
+
+import myPhoto from "../assets/images/myphoto.jpg"
+import "../styles/about.scss"
 
 const About = () => {
+  const { language } = useLanguage()
+  let aboutContent = aboutPT
+
+  if (language === "en") {
+    aboutContent = aboutEN
+  } else if (language === "es") {
+    aboutContent = aboutES
+  }
+
   const {
     handleToggleMode,
     handleMouseOver,
@@ -21,12 +36,8 @@ const About = () => {
   return (
     <section id="about">
       <div className="about-container">
-        <h2 className="section-title">Quem Sou</h2>
-        <p className="intro-text">
-          Apaixonado por tecnologia e desafios, tenho uma trajetória marcada
-          pela integração de design e desenvolvimento, sempre em busca de
-          soluções inovadoras e eficazes.
-        </p>
+        <h2 className="section-title">{aboutContent.title}</h2>
+        <p className="intro-text">{aboutContent.intro}</p>
         <div className="about-content">
           <div className="left-column">
             <img
@@ -38,23 +49,12 @@ const About = () => {
           </div>
           <div className="right-column">
             <ul className="about-list">
-              <li>
-                Formado em Arquitetura e Urbanismo pela Universidade de
-                Fortaleza (UNIFOR)
-              </li>
-              <li>Curso completo de Full Stack Python pela EBAC.</li>
-              <li>
-                Apaixonado por solucionar problemas, praticando todos os dias.
-              </li>
-              <li>Fácil comunicação. Trabalho bem em equipe.</li>
-              <li>
-                Falo inglês avançado e espanhol intermediário, e estou sempre
-                pronto para colaborar em equipes diversas e internacionais.
-              </li>
-              <li>
-                Fora do ambiente de trabalho, gosto de praticar Beach Tennis,
-                pintar, assistir filmes e ouvir música.
-              </li>
+              <li>{aboutContent.listA}</li>
+              <li>{aboutContent.listB}</li>
+              <li>{aboutContent.listC}</li>
+              <li>{aboutContent.listD}</li>
+              <li>{aboutContent.listE}</li>
+              <li>{aboutContent.listF}</li>
             </ul>
           </div>
         </div>

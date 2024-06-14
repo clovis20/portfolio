@@ -3,9 +3,12 @@ import { LanguageProvider } from "./context/LanguageContext"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import About from "./components/About"
+import Projects from "./components/Projects"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 import LanguageModal from "./components/LanguageModal"
 import "./styles/style.scss"
-import "./styles/CodePopup.scss"
+import "./styles/codePopup.scss"
 import "./App.css"
 
 const App = () => {
@@ -27,16 +30,9 @@ const App = () => {
       <Header />
       <Hero />
       <About />
-      <main>
-        <section id="projects">
-          <h2>Projetos</h2>
-          <p>Descrição dos projetos.</p>
-        </section>
-        <section id="contact">
-          <h2>Contato</h2>
-          <p>Informações de contato.</p>
-        </section>
-      </main>
+      <Projects />
+      <Contact />
+      <Footer />
       <div
         className={`modal-background ${isLanguageModalOpen ? "" : "hidden"}`}
       >

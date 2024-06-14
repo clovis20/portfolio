@@ -20,7 +20,8 @@ import heroEN from "./Languages/Hero/heroEN"
 import heroES from "./Languages/Hero/heroES"
 import heroCss from "./Codes/HeroCss"
 import heroCode from "./Codes/HeroCode"
-import "../styles/Hero.scss"
+
+import "../styles/hero.scss"
 
 const Hero = () => {
   const { language } = useLanguage()

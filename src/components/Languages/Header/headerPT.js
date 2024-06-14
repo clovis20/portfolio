@@ -1,10 +1,10 @@
-// headerPT.js
+// headerEN.js
 
-const headerPT = {
+const headerEN = {
   home: "INÍCIO",
   about: "QUEM SOU",
   projects: "PROJETOS",
   contact: "CONTATO",
 }
 
-export default headerPT
+export default headerEN

@@ -1,4 +1,4 @@
-// HeaderES.js
+// headerES.js
 
 const headerES = {
   home: "INICIO",
