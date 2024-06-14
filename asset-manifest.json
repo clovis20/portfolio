@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e7fdb37f.css",
-    "main.js": "/portfolio/static/js/main.73656a12.js",
+    "main.css": "/portfolio/static/css/main.edbc2e94.css",
+    "main.js": "/portfolio/static/js/main.1e87cf43.js",
     "static/js/511.6c464508.chunk.js": "/portfolio/static/js/511.6c464508.chunk.js",
-    "static/media/heroimage.png": "/portfolio/static/media/heroimage.54d237a55bf768619dfd.png",
-    "static/media/myphoto.jpg": "/portfolio/static/media/myphoto.0032cb05e4c912c4e92f.jpg",
+    "static/media/quicksand.svg": "/portfolio/static/media/quicksand.976fcb738d59be2b9971776a7eebfb38.svg",
+    "static/media/myphoto.svg": "/portfolio/static/media/myphoto.11761aad06435b0714548ccb6e013639.svg",
+    "static/media/efood.svg": "/portfolio/static/media/efood.27d303d324064544072e2c45f0918faf.svg",
+    "static/media/pypeep.png": "/portfolio/static/media/pypeep.4022e9f985e88766f18a.png",
     "static/media/englishflag.png": "/portfolio/static/media/englishflag.789ff1da7dc0b7ff0220.png",
     "static/media/brazilflag.png": "/portfolio/static/media/brazilflag.4daec62870c4385b8871.png",
+    "static/media/heroimage.svg": "/portfolio/static/media/heroimage.2b928f99b971b6b6034ad1be06c3d1a2.svg",
     "static/media/spainflag.png": "/portfolio/static/media/spainflag.09945efd998584311bf1.png",
     "index.html": "/portfolio/index.html",
-    "main.e7fdb37f.css.map": "/portfolio/static/css/main.e7fdb37f.css.map",
-    "main.73656a12.js.map": "/portfolio/static/js/main.73656a12.js.map",
+    "main.edbc2e94.css.map": "/portfolio/static/css/main.edbc2e94.css.map",
+    "main.1e87cf43.js.map": "/portfolio/static/js/main.1e87cf43.js.map",
     "511.6c464508.chunk.js.map": "/portfolio/static/js/511.6c464508.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7fdb37f.css",
-    "static/js/main.73656a12.js"
+    "static/css/main.edbc2e94.css",
+    "static/js/main.1e87cf43.js"
   ]
 }
