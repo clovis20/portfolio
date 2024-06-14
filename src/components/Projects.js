@@ -1,7 +1,7 @@
 import React from "react"
 import pypeep from "../assets/images/pypeep.png"
-import efood from "../assets/images/efood.png"
-import quicksand from "../assets/images/quicksand.png"
+import efood from "../assets/images/efood.svg"
+import quicksand from "../assets/images/quicksand.svg"
 
 import { useLanguage } from "../context/LanguageContext"
 
