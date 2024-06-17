@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.edbc2e94.css",
-    "main.js": "/portfolio/static/js/main.8e8268eb.js",
+    "main.css": "/portfolio/static/css/main.caf4bed0.css",
+    "main.js": "/portfolio/static/js/main.67c96560.js",
     "static/js/511.6c464508.chunk.js": "/portfolio/static/js/511.6c464508.chunk.js",
-    "static/media/quicksand.webp": "/portfolio/static/media/quicksand.fa99b047e5d630a13989.webp",
+    "static/media/quicksandz.webp": "/portfolio/static/media/quicksandz.d5332f89798a2093eb44.webp",
+    "static/media/efoodz.webp": "/portfolio/static/media/efoodz.ec498182582d1317b659.webp",
     "static/media/myphoto.webp": "/portfolio/static/media/myphoto.56e818efbdcc4c08adc1.webp",
-    "static/media/efood.webp": "/portfolio/static/media/efood.370e78a674074a73e071.webp",
-    "static/media/pypeep.png": "/portfolio/static/media/pypeep.4022e9f985e88766f18a.png",
+    "static/media/heroimagee.png": "/portfolio/static/media/heroimagee.f24b941ca6a735a016d1.png",
+    "static/media/eplayz.webp": "/portfolio/static/media/eplayz.692a6e25d0a100afc49a.webp",
     "static/media/englishflag.png": "/portfolio/static/media/englishflag.789ff1da7dc0b7ff0220.png",
+    "static/media/pypeepz.webp": "/portfolio/static/media/pypeepz.cd3b131c711c7a4eaaea.webp",
     "static/media/brazilflag.png": "/portfolio/static/media/brazilflag.4daec62870c4385b8871.png",
-    "static/media/heroimage.webp": "/portfolio/static/media/heroimage.b2f992ebb2f1dc48e48b.webp",
     "static/media/spainflag.png": "/portfolio/static/media/spainflag.09945efd998584311bf1.png",
     "index.html": "/portfolio/index.html",
-    "main.edbc2e94.css.map": "/portfolio/static/css/main.edbc2e94.css.map",
-    "main.8e8268eb.js.map": "/portfolio/static/js/main.8e8268eb.js.map",
+    "main.caf4bed0.css.map": "/portfolio/static/css/main.caf4bed0.css.map",
+    "main.67c96560.js.map": "/portfolio/static/js/main.67c96560.js.map",
     "511.6c464508.chunk.js.map": "/portfolio/static/js/511.6c464508.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edbc2e94.css",
-    "static/js/main.8e8268eb.js"
+    "static/css/main.caf4bed0.css",
+    "static/js/main.67c96560.js"
   ]
 }
