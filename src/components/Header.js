@@ -43,16 +43,16 @@ const Header = () => {
         <nav className="nav">
           <ul>
             <li>
-              <a href="#inicio">{headerContent.home}</a>
+              <a href="#index">{headerContent.home}</a>
             </li>
             <li>
-              <a href="#quem-sou">{headerContent.about}</a>
+              <a href="#about">{headerContent.about}</a>
             </li>
             <li>
-              <a href="#projetos">{headerContent.projects}</a>
+              <a href="#projects">{headerContent.projects}</a>
             </li>
             <li>
-              <a href="#contato">{headerContent.contact}</a>
+              <a href="#contact">{headerContent.contact}</a>
             </li>
           </ul>
         </nav>

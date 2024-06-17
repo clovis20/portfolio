@@ -7,11 +7,13 @@ import {
   faReact,
   faNodeJs,
   faVuejs,
+  faSass,
+  faBootstrap,
   faPython,
   faDocker,
 } from "@fortawesome/free-brands-svg-icons"
 import { useLanguage } from "../context/LanguageContext"
-import heroimage from "../assets/images/heroimage.webp"
+import heroimage from "../assets/images/heroimagee.png"
 import CodePopup from "./CodePopup"
 import useCodePopup from "../hooks/useCodePopup"
 
@@ -43,7 +45,7 @@ const Hero = () => {
   } = useCodePopup()
 
   return (
-    <section className="hero">
+    <section id="index" className="hero">
       <div className="container hero-content">
         <div className="hero-text">
           <div className="text-content">
@@ -57,6 +59,8 @@ const Hero = () => {
             <FontAwesomeIcon icon={faReact} size="2x" />
             <FontAwesomeIcon icon={faNodeJs} size="2x" />
             <FontAwesomeIcon icon={faVuejs} size="2x" />
+            <FontAwesomeIcon icon={faBootstrap} size="2x" />
+            <FontAwesomeIcon icon={faSass} size="2x" />
             <FontAwesomeIcon icon={faPython} size="2x" />
             <FontAwesomeIcon icon={faDocker} size="2x" />
             {/* Adicione mais ícones conforme necessário */}

@@ -1,7 +1,4 @@
-import React from "react"
-import pypeep from "../assets/images/pypeep.png"
-import efood from "../assets/images/efood.webp"
-import quicksand from "../assets/images/quicksand.webp"
+import React, { useState } from "react"
 
 import { useLanguage } from "../context/LanguageContext"
 
@@ -21,111 +18,68 @@ const Projects = () => {
     projectsContent = projectsES
   }
 
+  const [selectedProject, setSelectedProject] = useState(null)
+
+  const handleMoreInfoClick = (project) => {
+    setSelectedProject(project)
+  }
+
+  const closePopup = () => {
+    setSelectedProject(null)
+  }
+
   return (
     <section id="projects">
       <div className="projects-container">
         <h2 className="section-title">{projectsContent.title}</h2>
       </div>
       <div className="projects-content">
-        <div className="project">
-          <div className="project-image">
-            <img src={pypeep} alt="PyPeep" />
-          </div>
-          <div className="project-details">
-            <div className="project-title">{projectsContent.pTitleA}</div>
-            <div className="project-description">
-              {projectsContent.pDescriptionAa}
-              <br />
-              <br />
-              {projectsContent.pDescriptionAb}
+        {projectsContent.projects &&
+          projectsContent.projects.map((project, index) => (
+            <div className="project" key={index}>
+              <div className="project-title">{project.title}</div>
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
+              <div className="project-link">
+                <button onClick={() => handleMoreInfoClick(project)}>
+                  {projectsContent.button}
+                </button>
+              </div>
             </div>
-            <div className="project-tools">{projectsContent.pToolsA}</div>
-            <div className="project-link">
-              <a
-                href="https://cjr-projeto14.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {projectsContent.button}
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="project">
-          <div className="project-image">
-            <img src={efood} alt="eFood" />
-          </div>
-          <div className="project-details">
-            <div className="project-title">{projectsContent.pTitleB}</div>
-            <div className="project-description">
-              {projectsContent.pDescriptionBa}
-              <br />
-              <br />
-              {projectsContent.pDescriptionBb}
-            </div>
-            <div className="project-tools">{projectsContent.pToolsB}</div>
-            <div className="project-link">
-              <a
-                href="https://cjr-projeto14.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {projectsContent.button}
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="project">
-          <div className="project-image">
-            <img src={quicksand} alt="Quicksand" />
-          </div>
-          <div className="project-details">
-            <div className="project-title">{projectsContent.pTitleC}</div>
-            <div className="project-description">
-              {projectsContent.pDescriptionCa}
-              <br />
-              <br />
-              {projectsContent.pDescriptionCb}
-            </div>
-            <div className="project-tools">{projectsContent.pToolsC}</div>
-            <div className="project-link">
-              <a
-                href="https://cjr-projeto14.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {projectsContent.button}
-              </a>
-            </div>
-          </div>
-        </div>
-        {/* <div className="project">
-          <div className="project-image">
-            <img src={pypeep} alt="PyPeep" />
-          </div>
-          <div className="project-details">
-            <div className="project-title">PyPeep</div>
-            <div className="project-description">
-              Projeto final para o curso de FullStack da EBAC
-              <br />
-              <br />
-              Desafio: criar um site clone do Twitter com sistema CRUD completo.
-            </div>
-            <div className="project-tools">
-              Ferramentas: HTML, CSS, Bootstrap, Django, Python, Linux
-            </div>
-            <div className="project-link">
-              <a
-                href="http://clovisjr20.pythonanywhere.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visitar Projeto
-              </a>
-            </div>
-          </div>
-        </div> */}
+          ))}
       </div>
+      {selectedProject && (
+        <div className="popup">
+          <div className="popup-content">
+            <button className="close-button" onClick={closePopup}>
+              &times;
+            </button>
+            <h3>{selectedProject.title}</h3>
+            <p>{selectedProject.description}</p>
+            <p>{selectedProject.descriptionb}</p>
+
+            <img src={selectedProject.image} alt={selectedProject.title} />
+            <p className="project-tools">{selectedProject.tools}</p>
+            <div className="popup-links">
+              <a
+                href={selectedProject.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href={selectedProject.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {selectedProject.visit}
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

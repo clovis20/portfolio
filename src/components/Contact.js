@@ -36,7 +36,11 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post("/send-email", formData)
+      await axios.post(
+        "https://nome-do-seu-app.vercel.app/api/send-email",
+        formData
+      )
+
       alert("Mensagem enviada com sucesso!")
       setFormData({ name: "", email: "", message: "" })
     } catch (error) {
