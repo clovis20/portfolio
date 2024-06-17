@@ -6,6 +6,8 @@ import aboutCss from "./Codes/AboutCss"
 import aboutCode from "./Codes/AboutCode"
 import useCodePopup from "../hooks/useCodePopup"
 import { useLanguage } from "../context/LanguageContext"
+import { faCode } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import aboutPT from "./Languages/About/aboutPT"
 import aboutEN from "./Languages/About/aboutEN"
@@ -40,12 +42,7 @@ const About = () => {
         <p className="intro-text">{aboutContent.intro}</p>
         <div className="about-content">
           <div className="left-column">
-            <img
-              src={myPhoto}
-              alt="Minha Foto"
-              className="my-photo"
-              onMouseOver={() => handleMouseOver(aboutCode, aboutCss)}
-            />
+            <img src={myPhoto} alt="Minha Foto" className="my-photo" />
           </div>
           <div className="right-column">
             <ul className="about-list">
@@ -58,7 +55,17 @@ const About = () => {
             </ul>
           </div>
         </div>
+        <div className="code-icon-container">
+          <FontAwesomeIcon
+            icon={faCode}
+            className="code-icon"
+            onMouseOver={() => handleMouseOver(aboutCode, aboutCss)}
+          />
+        </div>
       </div>
+      {isPopupOpen && (
+        <div className="popup-overlay" onClick={handleClosePopup}></div>
+      )}
       <CodePopup
         isOpen={isPopupOpen}
         jsCode={popupJsContent}

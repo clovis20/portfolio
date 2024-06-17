@@ -16,7 +16,7 @@ const projectsPT = {
       image: pypeep,
       githubLink: "/https://github.com/clovis20/pypeep",
       projectLink: "http://clovisjr20.pythonanywhere.com",
-      visit: "Visualizar Página",
+      visit: "Visualizar",
     },
     {
       title: "eFood",
@@ -27,7 +27,7 @@ const projectsPT = {
       image: efood,
       githubLink: "https://github.com/clovis20/efood",
       projectLink: "https://efood-neon.vercel.app/",
-      visit: "Visualizar Página",
+      visit: "Visualizar",
     },
     {
       title: "Projeto Quicksand",
@@ -38,7 +38,7 @@ const projectsPT = {
       image: quicksand,
       githubLink: "https://github.com/clovis20/projeto14",
       projectLink: "https://cjr-projeto14.vercel.app/",
-      visit: "Visualizar Página",
+      visit: "Visualizar",
     },
 
     {
@@ -51,7 +51,7 @@ const projectsPT = {
       image: eplay,
       githubLink: "https://github.com/clovis20/eplay",
       projectLink: "https://eplay-one.vercel.app/",
-      visit: "Visualizar Página",
+      visit: "Visualizar",
     },
   ],
 }

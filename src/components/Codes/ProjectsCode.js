@@ -1,3 +1,5 @@
+const projectsCode = `/* Projects.js */
+
 import React, { useState, useEffect, useRef } from "react"
 import { useLanguage } from "../context/LanguageContext"
 import { faCode } from "@fortawesome/free-solid-svg-icons"
@@ -130,3 +132,6 @@ const Projects = () => {
 }
 
 export default Projects
+`
+
+export default projectsCode

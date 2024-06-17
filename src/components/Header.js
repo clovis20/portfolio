@@ -57,6 +57,9 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+      {isPopupOpen && (
+        <div className="popup-overlay" onClick={handleClosePopup}></div>
+      )}
       <CodePopup
         isOpen={isPopupOpen}
         jsCode={popupJsContent}

@@ -1,4 +1,4 @@
-// styles/contact.scss
+const contactCss = `/* Contacts.scss */
 
 @import "colors";
 
@@ -14,8 +14,8 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza os itens horizontalmente */
-  text-align: center; /* Centraliza o texto dentro da seção */
+  align-items: center;
+  text-align: center;
 
   h2 {
     text-align: center;
@@ -33,14 +33,14 @@
     max-width: 1240px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Alinha os itens ao topo */
+    align-items: center;
     margin-top: 40px;
     padding: 50px;
     border: 2px solid;
     border-radius: 20px;
 
     .contact-form {
-      flex: 1; /* Ocupa 1 parte do espaço disponível */
+      flex: 1;
       text-align: left;
 
       label {
@@ -117,12 +117,16 @@
     }
   }
   .code-icon-container {
-    position: absolute; /* Mantendo position absolute aqui */
-    bottom: 20px; /* Ajustando a posição do ícone */
-    right: 20px; /* Ajustando a posição do ícone */
-    color: $light-color; /* Cor do ícone */
-    font-size: 2em; /* Tamanho do ícone */
-    cursor: pointer; /* Adicionando cursor pointer para indicar que é clicável */
-    z-index: 10; /* Ajustando z-index conforme necessário */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: $light-color;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10;
   }
 }
+
+`
+
+export default contactCss

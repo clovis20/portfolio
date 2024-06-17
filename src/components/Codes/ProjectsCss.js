@@ -1,3 +1,5 @@
+const projectsCss = `/* Projects.scss */
+
 @import "colors";
 
 #projects {
@@ -142,12 +144,15 @@
     }
   }
   .code-icon-container {
-    position: absolute; /* Mantendo position absolute aqui */
-    bottom: 20px; /* Ajustando a posição do ícone */
-    right: 20px; /* Ajustando a posição do ícone */
-    color: $light-color; /* Cor do ícone */
-    font-size: 2em; /* Tamanho do ícone */
-    cursor: pointer; /* Adicionando cursor pointer para indicar que é clicável */
-    z-index: 9; /* Ajustando z-index conforme necessário */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: $light-color;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10;
   }
 }
+`
+
+export default projectsCss

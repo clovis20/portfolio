@@ -1,4 +1,4 @@
-// footerPT.js
+// footerES.js
 
 const footerES = {
   social: "Sígueme en las redes",

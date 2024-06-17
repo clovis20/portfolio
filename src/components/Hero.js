@@ -12,8 +12,10 @@ import {
   faPython,
   faDocker,
 } from "@fortawesome/free-brands-svg-icons"
+import { faCode } from "@fortawesome/free-solid-svg-icons"
 import { useLanguage } from "../context/LanguageContext"
 import heroimage from "../assets/images/heroimagee.png"
+import seta from "../assets/images/seta.png"
 import CodePopup from "./CodePopup"
 import useCodePopup from "../hooks/useCodePopup"
 
@@ -65,19 +67,31 @@ const Hero = () => {
             <FontAwesomeIcon icon={faDocker} size="2x" />
             {/* Adicione mais ícones conforme necessário */}
           </div>
+          <div className="hover-notice">
+            <p>
+              Passe o mouse sobre o símbolo de {"</>"} para ver o código-fonte
+            </p>
+          </div>
         </div>
         <div className="hero-image-container">
-          <img
-            className="hero-image"
-            src={heroimage}
-            alt=""
-            onMouseOver={() => handleMouseOver(heroCode, heroCss)}
-          />
+          <img className="hero-image" src={heroimage} alt="" />
         </div>
       </div>
-      <div className="scroll-down">
-        <span></span>
+      <div className="code-icon-container">
+        <img
+          src={seta}
+          alt="Seta apontando para o ícone de código"
+          className="seta-icon"
+        />
+        <FontAwesomeIcon
+          icon={faCode}
+          className="code-icon"
+          onMouseOver={() => handleMouseOver(heroCode, heroCss)}
+        />
       </div>
+      {isPopupOpen && (
+        <div className="popup-overlay" onClick={handleClosePopup}></div>
+      )}
       <CodePopup
         isOpen={isPopupOpen}
         jsCode={popupJsContent}
