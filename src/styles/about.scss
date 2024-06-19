@@ -79,3 +79,18 @@
     z-index: 1; /* Ajustando z-index conforme necessário */
   }
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+
+    .right-column {
+      padding-left: 0;
+      ul {
+        text-indent: 0;
+      }
+    }
+  }
+}

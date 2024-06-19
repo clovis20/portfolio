@@ -110,6 +110,46 @@
   }
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+
+    .hero-content {
+      display: block;
+
+      .hero-image-container {
+        margin-top: 20px;
+      }
+      .hero-text {
+        text-align: center;
+
+        .text-content {
+          h2 {
+            font-size: 18px; // Reduzindo o tamanho do h2 para dispositivos menores
+          }
+
+          h1 {
+            font-size: 24px; // Reduzindo o tamanho do h1 para dispositivos menores
+          }
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      .hero-icons {
+        display: flex;
+        flex-wrap: wrap; // Permite que os ícones se ajustem a várias linhas
+        justify-content: center; // Centraliza os ícones horizontalmente
+        gap: 12px; // Espaçamento entre os ícones
+        margin-top: 8px; // Espaçamento opcional entre a seção de texto e os ícones
+      }
+    }
+  }
+}
+
 @keyframes typing {
   from {
     width: 0;

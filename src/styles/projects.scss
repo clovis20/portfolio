@@ -151,3 +151,11 @@
     z-index: 9; /* Ajustando z-index conforme necessário */
   }
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .projects-content {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    padding: 0 10px;
+  }
+}

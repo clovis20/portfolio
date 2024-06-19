@@ -1,6 +1,6 @@
 // Header.js
 
-import React from "react"
+import React, { useEffect } from "react"
 import CP from "./CP"
 import { useLanguage } from "../context/LanguageContext"
 import headerEN from "./Languages/Header/headerEN"
@@ -31,6 +31,22 @@ const Header = () => {
     headerContent = headerES
   }
 
+  useEffect(() => {
+    const burger = document.querySelector(".burger")
+    const nav = document.querySelector(".nav ul")
+
+    const handleBurgerClick = () => {
+      nav.classList.toggle("nav-active")
+      burger.classList.toggle("toggle")
+    }
+
+    burger.addEventListener("click", handleBurgerClick)
+
+    return () => {
+      burger.removeEventListener("click", handleBurgerClick)
+    }
+  }, [])
+
   return (
     <header className="header">
       <div className="container">
@@ -56,6 +72,11 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <div className="burger">
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+        </div>
       </div>
       {isPopupOpen && (
         <div className="popup-overlay" onClick={handleClosePopup}></div>
