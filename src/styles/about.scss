@@ -3,7 +3,7 @@
 #about {
   .about-container {
     background-color: $primary-color;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,15 +82,46 @@
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .about-content {
+  #about .about-container {
+    padding: 10px;
+  }
+
+  #about .section-title {
+    font-size: 36px; /* Ajuste o tamanho da fonte para dispositivos menores */
+  }
+
+  #about .intro-text {
+    font-size: 1.1rem; /* Ajuste o tamanho da fonte para dispositivos menores */
+    margin-bottom: 40px;
+  }
+
+  #about .about-content {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
+
+    .left-column,
+    .right-column {
+      width: 100%;
+      padding: 0 10px;
+    }
 
     .right-column {
       padding-left: 0;
+
       ul {
         text-indent: 0;
+        font-size: 1rem; /* Ajuste o tamanho da fonte para dispositivos menores */
+        margin-bottom: 60px;
+        li {
+          margin-bottom: 20px;
+        }
       }
+    }
+
+    .my-photo {
+      max-width: 200px; /* Ajuste o tamanho da foto para dispositivos menores */
+      margin: 0 auto; /* Centraliza a imagem */
     }
   }
 }

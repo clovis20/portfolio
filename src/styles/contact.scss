@@ -3,7 +3,7 @@
 @import "colors";
 
 #contact {
-  height: 80vh;
+  height: auto;
   max-width: 100%;
   margin: 0 auto;
   padding: 40px;
@@ -124,5 +124,33 @@
     font-size: 2em; /* Tamanho do ícone */
     cursor: pointer; /* Adicionando cursor pointer para indicar que é clicável */
     z-index: 10; /* Ajustando z-index conforme necessário */
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  #contact {
+    padding: 20px; /* Reduz o padding geral */
+    .contact-container {
+      padding: 10px;
+      border-width: 1px; /* Reduz a espessura da borda */
+      border-radius: 12px; /* Reduz o raio da borda */
+
+      .contact-info {
+        .info-item {
+          padding: 0px 0px; /* Reduz o espaçamento interno */
+          flex-direction: column; /* Empilha os itens em dispositivos menores */
+          width: 80%; /* Ajusta a largura do .info-item */
+          margin: 0 auto; /* Centraliza o .info-item horizontalmente */
+          text-align: center; /* Centraliza o texto dentro do .info-item */
+        }
+      }
+    }
+  }
+  .contact-form {
+    display: none; /* Oculta o formulário em dispositivos menores */
+  }
+  #contact h2 {
+    font-size: 36px; /* Define o tamanho da fonte do título */
   }
 }

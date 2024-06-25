@@ -158,4 +158,11 @@
     grid-template-columns: 1fr; /* Uma coluna em telas menores */
     padding: 0 10px;
   }
+  #projects {
+    .projects-container {
+      .section-title {
+        font-size: 36px; /* Ajuste o tamanho da fonte para dispositivos menores */
+      }
+    }
+  }
 }

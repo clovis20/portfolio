@@ -3,7 +3,7 @@
 * {
   font-family: "League Spartan", sans-serif;
   box-sizing: border-box;
-  outline: 1px solid red; // Isso deve ser removido depois de identificar o problema
+  //outline: 1px solid red; // Isso deve ser removido depois de identificar o problema
 }
 
 a {
@@ -42,20 +42,7 @@ video {
   .container {
     padding: 0 20px;
   }
+  .code-icon {
+    width: 1.3rem;
+  }
 }
-
-/* .popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  z-index: 1; /* Z-index maior que o z-index do .popup-overlay
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 11px 11px rgba(0, 0, 0, 0.5);
-} */
-
-/* Outros estilos do popup (botões, código, etc.) */

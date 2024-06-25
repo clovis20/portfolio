@@ -147,6 +147,14 @@
         margin-top: 8px; // Espaçamento opcional entre a seção de texto e os ícones
       }
     }
+    .seta-icon {
+      width: 40px;
+      margin-top: 10px;
+      animation:
+        bounce 2s infinite,
+        pulse 2s infinite;
+      filter: invert(1);
+    }
   }
 }
 

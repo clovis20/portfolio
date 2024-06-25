@@ -4,7 +4,7 @@
 
 .footer {
   background-color: $darkprimary-color;
-  color: #fff;
+  color: $light-color;
   padding: 20px 0;
   text-align: center;
 }
@@ -20,20 +20,19 @@
 
 .footer-logo {
   font-size: 24px;
-  //margin-bottom: 10px;
 }
 
 .social-icons {
   margin-bottom: 20px;
 
   a {
-    color: #fff;
+    color: $light-color;
     margin: 0 10px;
     transition: color 0.3s;
   }
 
   a:hover {
-    color: #007bff; /* Cor de hover a ser ajustada conforme seu tema */
+    color: $info-color; /* Cor de hover a ser ajustada conforme seu tema */
   }
 }
 

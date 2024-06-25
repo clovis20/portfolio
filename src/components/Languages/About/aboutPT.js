@@ -6,7 +6,7 @@ const aboutPT = {
     "Apaixonado por tecnologia e desafios, tenho uma trajetória marcada pela integração de design e desenvolvimento, sempre em busca de soluções inovadoras e eficazes.",
 
   listA:
-    "Graduado en Arquitectura y Urbanismo por la Universidad de Fortaleza (UNIFOR).",
+    "Graduado em Arquitetura e Urbanismo pela Universidade de Fortaleza (UNIFOR).",
   listB: "Curso completo de Full Stack Python pela EBAC.",
   listC: "Apaixonado por solucionar problemas, praticando todos os dias.",
   listD: "Fácil comunicação. Trabalho bem em equipe.",

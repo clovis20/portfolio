@@ -17,6 +17,12 @@
   border: 2px solid $darkprimary-color;
   border-radius: 20px;
   box-shadow: 0 0 11px 11px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 10px; /* Espaçamento interno reduzido */
+    font-size: 14px; /* Tamanho da fonte reduzido para dispositivos menores */
+  }
 }
 
 #codePopup pre {
