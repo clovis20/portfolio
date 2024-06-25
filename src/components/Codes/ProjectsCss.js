@@ -144,15 +144,29 @@ const projectsCss = `/* Projects.scss */
     }
   }
   .code-icon-container {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: $light-color;
-    font-size: 2em;
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px; 
+    color: $light-color; 
+    font-size: 2em; 
     cursor: pointer;
-    z-index: 10;
+    z-index: 9;
   }
 }
-`
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .projects-content {
+    grid-template-columns: 1fr; 
+    padding: 0 10px;
+  }
+  #projects {
+    .projects-container {
+      .section-title {
+        font-size: 36px; 
+      }
+    }
+  }
+}`
 
 export default projectsCss

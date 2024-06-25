@@ -1,9 +1,11 @@
 const contactCss = `/* Contacts.scss */
 
+// styles/contact.scss
+
 @import "colors";
 
 #contact {
-  height: 80vh;
+  height: auto;
   max-width: 100%;
   margin: 0 auto;
   padding: 40px;
@@ -14,8 +16,8 @@ const contactCss = `/* Contacts.scss */
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: center; 
+  text-align: center; 
 
   h2 {
     text-align: center;
@@ -33,14 +35,14 @@ const contactCss = `/* Contacts.scss */
     max-width: 1240px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     margin-top: 40px;
     padding: 50px;
     border: 2px solid;
     border-radius: 20px;
 
     .contact-form {
-      flex: 1;
+      flex: 1; 
       text-align: left;
 
       label {
@@ -82,11 +84,11 @@ const contactCss = `/* Contacts.scss */
     }
 
     .contact-info {
-      flex: 1; /* Ocupa 1 parte do espaço disponível */
+      flex: 1; 
       display: flex;
       flex-direction: column;
-      align-items: center; /* Alinha os itens ao topo */
-      justify-content: flex-start; /* Alinha os itens à esquerda */
+      align-items: center; 
+      justify-content: flex-start; 
       gap: 20px;
 
       .info-item {
@@ -106,7 +108,7 @@ const contactCss = `/* Contacts.scss */
         }
 
         img {
-          width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+          width: 30px;
           margin-right: 10px;
         }
 
@@ -117,16 +119,42 @@ const contactCss = `/* Contacts.scss */
     }
   }
   .code-icon-container {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: $light-color;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 10;
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px; 
+    color: $light-color; 
+    font-size: 2em; 
+    cursor: pointer; 
+    z-index: 10; 
   }
 }
 
-`
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  #contact {
+    padding: 20px; 
+    .contact-container {
+      padding: 10px;
+      border-width: 1px; 
+      border-radius: 12px; 
+
+      .contact-info {
+        .info-item {
+          padding: 0px 0px; 
+          flex-direction: column; 
+          width: 80%; 
+          margin: 0 auto; 
+          text-align: center; 
+        }
+      }
+    }
+  }
+  .contact-form {
+    display: none;
+  }
+  #contact h2 {
+    font-size: 36px;
+  }
+}`
 
 export default contactCss

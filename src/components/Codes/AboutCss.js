@@ -5,13 +5,13 @@ const aboutCss = `/* About.scss */
 #about {
   .about-container {
     background-color: $primary-color;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 20px;
-    position: relative; 
+    position: relative;
   }
 
   .section-title {
@@ -72,13 +72,59 @@ const aboutCss = `/* About.scss */
   }
 
   .code-icon-container {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: $light-color;
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px; 
+    color: $light-color; 
     font-size: 2em; 
-    cursor: pointer;
+    cursor: pointer; 
     z-index: 1;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  #about .about-container {
+    padding: 10px;
+  }
+
+  #about .section-title {
+    font-size: 36px; 
+  }
+
+  #about .intro-text {
+    font-size: 1.1rem; 
+    margin-bottom: 40px;
+  }
+
+  #about .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+
+    .left-column,
+    .right-column {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .right-column {
+      padding-left: 0;
+
+      ul {
+        text-indent: 0;
+        font-size: 1rem;
+        margin-bottom: 60px;
+        li {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .my-photo {
+      max-width: 200px;      
+      margin: 0 auto;
+    }
   }
 }
 `

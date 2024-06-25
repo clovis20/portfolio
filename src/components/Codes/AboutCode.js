@@ -1,4 +1,4 @@
-const aboutCode = `// About.js //
+const aboutCode = `/* About.js */
 
 import React from "react"
 import CodePopup from "./CodePopup"

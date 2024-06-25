@@ -3,10 +3,10 @@ const heroCss = `/* Hero.scss */
 @import "colors";
 
 .hero {
-  background-color: $darkprimary-color;
-  color: $light-color;
-  height: 100vh;
-  text-align: center;
+  background-color: $darkprimary-color; 
+  color: $light-color; 
+  height: 100vh; 
+  text-align: center; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,15 +23,15 @@ const heroCss = `/* Hero.scss */
       .text-content {
         h2 {
           font-weight: 400;
-          font-size: 32px;
-          color: $light-color;
-          margin: 0;
+          font-size: 32px; 
+          color: $light-color; 
+          margin: 0; 
         }
 
         h1 {
-          font-size: 64px;
-          color: $secondary-color;
-          margin: 10px 0;
+          font-size: 64px; 
+          color: $secondary-color; 
+          margin: 10px 0; 
           overflow: hidden;
           white-space: nowrap;
           border-right: 0.15em solid $success-color;
@@ -93,13 +93,13 @@ const heroCss = `/* Hero.scss */
   }
 
   .code-icon-container {
-    position: absolute;
+    position: absolute; 
     bottom: 20px;
-    right: 20px;
+    right: 20px; 
     color: $light-color;
     font-size: 2em;
     cursor: pointer; 
-    z-index: 1;
+    z-index: 1; 
   }
 
   .seta-icon {
@@ -109,6 +109,54 @@ const heroCss = `/* Hero.scss */
       bounce 2s infinite,
       pulse 2s infinite;
     filter: invert(1);
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+
+    .hero-content {
+      display: block;
+
+      .hero-image-container {
+        margin-top: 20px;
+      }
+      .hero-text {
+        text-align: center;
+
+        .text-content {
+          h2 {
+            font-size: 18px;
+          }
+
+          h1 {
+            font-size: 24px;
+          }
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      .hero-icons {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 12px;
+        margin-top: 8px; 
+      }
+    }
+    .seta-icon {
+      width: 40px;
+      margin-top: 10px;
+      animation:
+        bounce 2s infinite,
+        pulse 2s infinite;
+      filter: invert(1);
+    }
   }
 }
 
@@ -157,7 +205,6 @@ const heroCss = `/* Hero.scss */
       1.2
     );
   }
-}
-`
+}`
 
 export default heroCss

@@ -67,11 +67,10 @@ const Hero = () => {
             <FontAwesomeIcon icon={faSass} size="2x" />
             <FontAwesomeIcon icon={faPython} size="2x" />
             <FontAwesomeIcon icon={faDocker} size="2x" />
+            {/* Adicione mais ícones conforme necessário */}
           </div>
           <div className="hover-notice">
-            <p>
-              Passe o mouse sobre o símbolo de {"</>"} para ver o código-fonte
-            </p>
+            <p>{heroContent.hoverNotice}</p>
           </div>
         </div>
         <div className="hero-image-container">
@@ -104,8 +103,6 @@ const Hero = () => {
   )
 }
 
-export default Hero
-
-`
+export default Hero`
 
 export default heroCode
