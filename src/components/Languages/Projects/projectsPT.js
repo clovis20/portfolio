@@ -14,7 +14,7 @@ const projectsPT = {
         "Desafio: criar um site clone do Twitter com sistema CRUD completo.",
       tools: "Ferramentas: HTML, CSS, Bootstrap, Django, Python, Linux",
       image: pypeep,
-      githubLink: "https://github.com/clovis20/pypeep",
+      githubLink: "/https://github.com/clovis20/pypeep",
       projectLink: "http://clovisjr20.pythonanywhere.com",
       visit: "Visualizar",
     },
